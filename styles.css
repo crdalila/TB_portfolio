@@ -1,0 +1,55 @@
+/*GENÉRICO*/
+
+body {
+    background-color: rgb(255, 250, 243);
+}
+
+header {
+    background-color: gainsboro
+}
+
+footer {
+    background-color: rgb(255, 253, 253);
+}
+
+/*nav*/
+
+#nav-links {
+    font-size: 22px;
+    list-style-type: none;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h2 {
+    font-size: 36px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/*footer*/
+
+.contact-list {
+    list-style-type: none;
+}
+
+.contact-link i {
+    font-size: 30px;
+}
+
+
+/*INDEX*/
+
+blockquote {
+    font-size: 25px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+}
+
+#firma-quote {
+    font-size: 16px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/*BIOGRAFÍA*/
+
+/*OBRAS*/
+
