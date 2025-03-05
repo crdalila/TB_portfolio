@@ -1,34 +1,72 @@
 /*GENÉRICO*/
 
-body {
-    background-color: rgb(255, 250, 243);
+* {
+    box-sizing: border-box;
+    margin: 0;
 }
 
-header {
-    background-color: gainsboro
+html, body {
+    min-height: 100vh;
 }
 
-footer {
-    background-color: rgb(255, 253, 253);
+a {
+    text-decoration: none;
 }
 
-/*nav*/
+p { 
+    font-size: 16px;
+}
+
+:root {
+    --accent-color: red;
+    --background-color: #fffaeb;
+    --background-secondary-color: #e7e3d7;
+}
+
+main {
+    background-color: var(--background-color);
+}
+
+header nav {
+    background-color: var(--background-secondary-color);
+    height: 7rem;
+    padding: 2rem;
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+}
 
 #nav-links {
     font-size: 22px;
     list-style-type: none;
     font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-flow: row;
+    gap: 1em;
 }
 
-h2 {
-    font-size: 36px;
-    font-family: 'Courier New', Courier, monospace;
-}
 
-/*footer*/
+footer {
+    background-color: var(--background-secondary-color);
+    width: 100%;
+    height: fit-content;
+    padding: 1em;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    bottom: 0;
+}
 
 .contact-list {
     list-style-type: none;
+    display: flex;
+    flex-flow: row;
+    gap: 3em;
+    padding: 0;
 }
 
 .contact-link i {
@@ -38,18 +76,73 @@ h2 {
 
 /*INDEX*/
 
+#sylvia-info {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+    padding: 3em 10%;
+    min-width: 500px;
+    max-width: 1920px;
+}
+
+#quote {
+    width: 50%;
+    display: flex;
+    flex-flow: column;
+    gap: 1em;
+}
+
 blockquote {
-    font-size: 25px;
+    font-size: 1.5rem;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-style: italic;
 }
 
-#firma-quote {
-    font-size: 16px;
+#quote p {
+    font-size: 1rem;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: right;
 }
 
 /*BIOGRAFÍA*/
+
+h2 {
+    font-size: 3rem;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 2em;
+}
+
+#biografia {
+    display: flex;
+    flex-flow: column;
+    padding: 6em;
+    gap: 1em;
+}
+
+#biografia p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.3rem;
+    text-indent: 2em;
+    text-align: justify;
+}
+
+.biotodo {
+    display: flex;
+    flex-flow: row;
+    gap: 2em;
+}
+
+.foto1 {
+    object-fit: cover;
+    width: 25%;    
+}
+
+.foto2 {
+    object-fit: cover;
+    width: 40%;
+}
 
 /*OBRAS*/
 
