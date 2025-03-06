@@ -1,11 +1,149 @@
-/*GENÉRICO*/
+/* ==========================================================================
+    RESET
+   ========================================================================== */
 
 * {
     box-sizing: border-box;
     margin: 0;
 }
 
-html, body {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    line-height: 1.3;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    display: inline-block;
+}
+
+
+/* ==========================================================================
+    GENÉRICO
+   ========================================================================== */
+
+html,
+body {
     min-height: 100vh;
 }
 
@@ -13,8 +151,13 @@ a {
     text-decoration: none;
 }
 
-p { 
+p {
     font-size: 16px;
+}
+
+p::first-letter {
+    text-transform: capitalize;
+    font-size: 1.3em;
 }
 
 :root {
@@ -39,7 +182,7 @@ header nav {
 }
 
 #nav-links {
-    font-size: 22px;
+    font-size: 1.5em;
     list-style-type: none;
     font-family: 'Courier New', Courier, monospace;
     display: flex;
@@ -47,18 +190,20 @@ header nav {
     gap: 1em;
 }
 
+header img {
+    width: 15rem;
+    object-fit: cover;
+}
 
 footer {
     background-color: var(--background-secondary-color);
     width: 100%;
-    height: fit-content;
     padding: 1em;
     display: flex;
     flex-flow: column;
     align-items: center;
     justify-content: center;
     gap: 1em;
-    bottom: 0;
 }
 
 .contact-list {
@@ -66,17 +211,36 @@ footer {
     display: flex;
     flex-flow: row;
     gap: 3em;
-    padding: 0;
+    padding: 0.5rem;
 }
 
 .contact-link i {
     font-size: 30px;
 }
 
+h1 {
+    font-size: 3rem;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 1.7em;
+}
 
-/*INDEX*/
+@media (max-width: 768px) {
+    #index {
+        min-width: 400px;
+    }
+    header nav {
+        flex-wrap: wrap;
+        height: 9rem;
+    }
 
-#sylvia-info {
+}
+
+
+/* ==========================================================================
+    PÁGINA: INDEX
+   ========================================================================== */
+
+#index {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -87,7 +251,7 @@ footer {
     max-width: 1920px;
 }
 
-#quote {
+#index__quote {
     width: 50%;
     display: flex;
     flex-flow: column;
@@ -100,19 +264,17 @@ blockquote {
     font-style: italic;
 }
 
-#quote p {
+#index__quote p {
     font-size: 1rem;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-align: right;
 }
 
-/*BIOGRAFÍA*/
 
-h2 {
-    font-size: 3rem;
-    font-family: 'Courier New', Courier, monospace;
-    margin-bottom: 2em;
-}
+
+/* ==========================================================================
+    PÁGINA: BIOGRAFÍA
+   ========================================================================== */
 
 #biografia {
     display: flex;
@@ -126,9 +288,10 @@ h2 {
     font-size: 1.3rem;
     text-indent: 2em;
     text-align: justify;
+
 }
 
-.biotodo {
+.bio__2partes {
     display: flex;
     flex-flow: row;
     gap: 2em;
@@ -136,7 +299,7 @@ h2 {
 
 .foto1 {
     object-fit: cover;
-    width: 25%;    
+    width: 25%;
 }
 
 .foto2 {
@@ -144,5 +307,79 @@ h2 {
     width: 40%;
 }
 
-/*OBRAS*/
+@media (max-width: 768px) {
+    .foto1, .foto2 {
+        display: none;
+    }
+    #biografia {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        padding: 2em;
+        gap: 0;
+    }
+}
 
+
+/* ==========================================================================
+    PÁGINA: OBRAS
+   ========================================================================== */
+
+   .obras__titulo {
+    padding-top: 2em;
+    padding-right: 3em;
+    text-align: right;
+    }
+
+#obras {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 1rem;
+    gap: 2rem;
+}
+
+.obras__obra {
+    width: 100%;
+    border: 0.1em inset lightgray;
+    border-radius: 5px;
+}
+
+.obras__obra img {
+    width: 100%;
+}
+
+.obras__obra-texto {
+    padding: 1.8rem;
+}
+
+.obras__obra-texto h3 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+
+.obras__obra-texto li {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.5em;
+}
+
+@media (min-width: 768px) {
+
+    #obras {
+        justify-content: center;
+    }
+    .obras__obra {
+        display:flex;
+        flex-flow: column;
+        align-items: center;
+        width: 30%;
+        margin: 1em;
+        padding: 2em;
+    }
+
+    .obras__obra img {
+        width: 15em;
+    }
+}
