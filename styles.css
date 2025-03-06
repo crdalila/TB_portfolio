@@ -325,11 +325,11 @@ blockquote {
     PÁGINA: OBRAS
    ========================================================================== */
 
-   .obras__titulo {
+.obras__titulo {
     padding-top: 2em;
     padding-right: 3em;
     text-align: right;
-    }
+}
 
 #obras {
     display: flex;
@@ -383,3 +383,40 @@ blockquote {
         width: 15em;
     }
 }
+
+
+/* ==========================================================================
+    PÁGINA: NEWSLETTER
+   ========================================================================== */
+
+.newsletter__titulo {
+    padding-top: 2em;
+    text-align: center;
+}
+
+#newsletter {
+    display: flex;
+    text-align: center;
+    padding: 0 12em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.3em;
+}
+
+fieldset {
+    border: 0.1em inset lightgray;
+    border-radius: 5px;
+    margin-bottom: 2em;
+}
+
+legend {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2em;
+    margin-left: 1em;
+    margin-bottom: 1em;
+}
+
+#newsletter label, #newsletter input, #newsletter select, #newsletter textarea, button {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.3em;
+}
+
