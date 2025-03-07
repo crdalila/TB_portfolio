@@ -153,6 +153,7 @@ a {
 
 p {
     font-size: 16px;
+    color: black,
 }
 
 p::first-letter {
@@ -196,21 +197,20 @@ header img {
 }
 
 footer {
+    height: 9rem;
     background-color: var(--background-secondary-color);
     width: 100%;
-    padding: 1em;
     display: flex;
     flex-flow: column;
     align-items: center;
     justify-content: center;
-    gap: 1em;
 }
 
 .contact-list {
     list-style-type: none;
     display: flex;
     flex-flow: row;
-    gap: 3em;
+    gap: 2em;
     padding: 0.5rem;
 }
 
@@ -224,15 +224,15 @@ h1 {
     margin-bottom: 1.7em;
 }
 
-@media (max-width: 768px) {
-    #index {
-        min-width: 400px;
-    }
+@media (max-width: 768px) { /*Para móvil*/
+
     header nav {
         flex-wrap: wrap;
         height: 9rem;
     }
-
+    #nav-links {
+        font-size: 1em;
+    }
 }
 
 
@@ -242,13 +242,11 @@ h1 {
 
 #index {
     display: flex;
-    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
     gap: 3em;
     padding: 3em 10%;
-    min-width: 500px;
-    max-width: 1920px;
+    height: calc(100vh - 16rem); /*al 100% restarle la suma de la altura del header y del footer*/
 }
 
 #index__quote {
@@ -268,6 +266,21 @@ blockquote {
     font-size: 1rem;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-align: right;
+}
+
+@media (max-width: 768px) { /*Para móvil*/
+    #index {
+        flex-direction: column;
+    }
+
+    #index img {
+        padding-top: 1em;
+    }
+
+    #index__quote {
+        width: 100%;
+        padding-bottom: 1em;
+    }
 }
 
 
@@ -299,7 +312,7 @@ blockquote {
 
 .foto1 {
     object-fit: cover;
-    width: 25%;
+    width: 20%;
 }
 
 .foto2 {
@@ -307,7 +320,7 @@ blockquote {
     width: 40%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) { /*Para móvil*/
     .foto1, .foto2 {
         display: none;
     }
@@ -365,7 +378,7 @@ blockquote {
     font-size: 1.5em;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) { /*Para ordenador*/
 
     #obras {
         justify-content: center;
@@ -396,10 +409,17 @@ blockquote {
 
 #newsletter {
     display: flex;
-    text-align: center;
-    padding: 0 12em;
+    justify-content: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 1.3em;
+    padding-bottom: 3em;
+}
+
+#newsletter__form--preguntas {
+    display: flex;
+    flex-flow: column;
+    padding: 0em 4em 0em 4em;
+    gap: 0.3em;
 }
 
 fieldset {
@@ -410,13 +430,56 @@ fieldset {
 
 legend {
     font-family: 'Courier New', Courier, monospace;
-    font-size: 2em;
+    font-size: 1.7em;
     margin-left: 1em;
     margin-bottom: 1em;
 }
 
 #newsletter label, #newsletter input, #newsletter select, #newsletter textarea, button {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 1.3em;
+    font-size: 1.1em;
 }
 
+#newsletter input, #newsletter select, #newsletter textarea {
+    margin-bottom: 1em;
+    margin-left: 1.5em;
+}
+
+#newsletter__form--buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+
+#newsletter__form--buttons button {
+
+    font-family: 'Courier New', Courier, monospace;
+    width: 7em;
+    height: 2.2em;
+}
+
+@media (max-width: 768px) { /*Para móvil*/
+    .newsletter__titulo {
+        font-size: 2em;
+    }
+
+    #newsletter {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: aqua;
+        font-size: 1em;
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+
+    fieldset {
+        display: flex;
+        width: 100%;
+        background-color: #fabada;
+        margin-left: 10em;
+    }
+
+    legend {
+        font-size: 1em;
+    }
+}
