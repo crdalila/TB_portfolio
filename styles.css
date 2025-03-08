@@ -403,41 +403,26 @@ blockquote {
    ========================================================================== */
 
 .newsletter__titulo {
-    padding-top: 2em;
     text-align: center;
+    font-size: 2.2em;
+    padding: 1em 0.5em;
+    margin: 0;
 }
 
-#newsletter {
-    display: flex;
-    justify-content: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 1.3em;
-    padding-bottom: 3em;
+fieldset {
+    border: 0.1em inset lightgray;
+    border-radius: 3px;
+    padding: 1em;
+}
+
+legend {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2em;
 }
 
 #newsletter__form--preguntas {
     display: flex;
     flex-flow: column;
-    padding: 0em 4em 0em 4em;
-    gap: 0.3em;
-}
-
-fieldset {
-    border: 0.1em inset lightgray;
-    border-radius: 5px;
-    margin-bottom: 2em;
-}
-
-legend {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 1.7em;
-    margin-left: 1em;
-    margin-bottom: 1em;
-}
-
-#newsletter label, #newsletter input, #newsletter select, #newsletter textarea, button {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 1.1em;
 }
 
 #newsletter input, #newsletter select, #newsletter textarea {
@@ -449,37 +434,27 @@ legend {
     display: flex;
     justify-content: center;
     gap: 2em;
+    padding-top: 2em;
+    padding-bottom: 3em;
 }
 
 #newsletter__form--buttons button {
-
     font-family: 'Courier New', Courier, monospace;
     width: 7em;
     height: 2.2em;
 }
 
-@media (max-width: 768px) { /*Para móvil*/
+
+@media (min-width: 768px) { /*Para ordenador*/
+
     .newsletter__titulo {
-        font-size: 2em;
-    }
-
+        padding-top: 2em;
+}
     #newsletter {
-        display: flex;
-        flex-wrap: wrap;
-        background-color: aqua;
-        font-size: 1em;
-        padding-left: 2em;
-        padding-right: 2em;
+        padding: 0 9em;
     }
-
     fieldset {
-        display: flex;
-        width: 100%;
-        background-color: #fabada;
-        margin-left: 10em;
-    }
-
-    legend {
-        font-size: 1em;
+        padding-left: 4em;
+        padding-right: 4em;
     }
 }
