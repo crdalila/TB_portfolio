@@ -151,6 +151,14 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    font-size: 1.2em;
+}
+
+a img:hover {
+    transform: scale(105%);
+}
+
 p {
     font-size: 16px;
     color: black,
@@ -206,6 +214,30 @@ footer {
     justify-content: center;
 }
 
+.footer-text {
+    display: flex;
+    flex-flow: row;
+}
+
+i:hover {
+    transform: scale(120%);
+}
+
+@keyframes Corazon {
+    0% {
+        transform: scale(100%);
+    }
+    50% {
+        transform: scale(120%);
+    }
+    100% {
+        transform: scale(100%);
+    }
+}
+#footer__heart {
+    animation: Corazon 2s infinite;
+}
+
 .contact-list {
     list-style-type: none;
     display: flex;
@@ -223,6 +255,8 @@ h1 {
     font-family: 'Courier New', Courier, monospace;
     margin-bottom: 1.7em;
 }
+
+
 
 @media (max-width: 768px) { /*Para móvil*/
 
@@ -425,9 +459,14 @@ legend {
     flex-flow: column;
 }
 
+#newsletter__form--preguntas-bloque2 {
+    padding-top: 2em;
+}
+
 #newsletter input, #newsletter select, #newsletter textarea {
     margin-bottom: 1em;
     margin-left: 1.5em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 #newsletter__form--buttons {
@@ -451,7 +490,8 @@ legend {
         padding-top: 2em;
 }
     #newsletter {
-        padding: 0 9em;
+        display: flex;
+        justify-content: center;
     }
     fieldset {
         padding-left: 4em;

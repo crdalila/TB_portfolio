@@ -43,37 +43,39 @@
                         <input type="email" id="email" name="email" required>
                     </div>
                 </fieldset>
-                <fieldset>
-                    <legend>Sobre Sylvia Plath</legend>
-                    <div id="newsletter__form--preguntas">
-                        <label>¿Conocías de antes a la autora?</label>
-                        <div class="newsletter__form--conocer">
-                            <input type="radio" name="conocer" id="conocer" value="si">
-                            <label for="si">Sí</label>
-                            <input type="radio" name="conocer" id="conocer" value="nopero">
-                            <label for="nopero">No</label>
-                            <input type="radio" name="conocer" id="conocer" value="nopero">
-                            <label for="nopero">¿Cómo la voy a conocer si está muerta?</label>
+                <div id="newsletter__form--preguntas-bloque2">
+                    <fieldset>
+                        <legend>Sobre Sylvia Plath</legend>
+                        <div id="newsletter__form--preguntas">
+                            <label>¿Conocías de antes a la autora?</label>
+                            <div class="newsletter__form--conocer">
+                                <input type="radio" name="conocer" id="conocer" value="si">
+                                <label for="si">Sí</label>
+                                <input type="radio" name="conocer" id="conocer" value="nopero">
+                                <label for="nopero">No</label>
+                                <input type="radio" name="conocer" id="conocer" value="nopero">
+                                <label for="nopero">¿Cómo la voy a conocer si está muerta?</label>
+                            </div>
+                            <label for="cantidad">¿Cuántos libros te has leído de la autora?</label>
+                            <input type="number" name="cantidad" id="cantidad" required>
+                            <label for="favorito">¿Cuál es tu libro favorito?</label>
+                            <select name="favorito" id="favorito">
+                                <option value="campana">La campana de cristal</option>
+                                <option value="ariel">Ariel</option>
+                                <option value="colossus">The Colossus and other poems</option>
+                                <option value="diarios">Diarios completos</option>
+                                <option value="ventura">Mary Ventura y el Noveno Reino</option>
+                                <option value="arboles">Árboles en invierno</option>
+                            </select>
+                            <label for="otrasautoras">¿Qué otras autoras del estilo conoces?</label>
+                            <textarea id="otrasautoras" name="otrasautoras" id="otrasautoras" rows="3"
+                                cols="40">Ejemplo: Joanne Didion, Alice Walker, etc</textarea>
+                            <div class="newsletter__form--suscribe">
+                                <label for="suscribe">¿Quieres recibir la Newsletter de Sylvia Plath?</label>
+                                <input type="checkbox" id="suscribe" name="suscribe">
+                            </div>
                         </div>
-                        <label for="cantidad">¿Cuántos libros te has leído de la autora?</label>
-                        <input type="number" name="cantidad" id="cantidad" required>
-                        <label for="favorito">¿Cuál es tu libro favorito?</label>
-                        <select name="favorito" id="favorito">
-                            <option value="campana">La campana de cristal</option>
-                            <option value="ariel">Ariel</option>
-                            <option value="colossus">The Colossus and other poems</option>
-                            <option value="diarios">Diarios completos</option>
-                            <option value="ventura">Mary Ventura y el Noveno Reino</option>
-                            <option value="arboles">Árboles en invierno</option>
-                        </select>
-                        <label for="otrasautoras">¿Qué otras autoras del estilo conoces?</label>
-                        <textarea id="otrasautoras" name="otrasautoras" id="otrasautoras" rows="3"
-                            cols="40">Ejemplo: Joanne Didion, Alice Walker, etc</textarea>
-                        <div class="newsletter__form--suscribe">
-                            <label for="suscribe">¿Quieres recibir la Newsletter de Sylvia Plath?</label>
-                            <input type="checkbox" id="suscribe" name="suscribe">
-                        </div>
-                    </div>
+                </div>
                 </fieldset>
                 <div id="newsletter__form--buttons">
                     <button type="submit">Enviar</button>
@@ -87,17 +89,17 @@
     <footer>
         <ul class="contact-list">
             <li class="contact-link">
-                <a href="https://es.wikipedia.org/wiki/Sylvia_Plath">
+                <a href="https://es.wikipedia.org/wiki/Sylvia_Plath" target="_blank">
                     <i class="fa-brands fa-wikipedia-w" style="color: #000000;"></i>
                 </a>
             </li>
             <li class="contact-link">
-                <a href="https://www.linkedin.com/in/dalila-cabrera-rios/">
+                <a href="https://www.linkedin.com/in/dalila-cabrera-rios/" target="_blank">
                     <i class="fa-brands fa-linkedin" style="color: #000000;"></i>
                 </a>
             </li>
         </ul>
-        <p class="footer-text">Hecho con ❤️ por Dalila Cabrera</p>
+        <p class="footer-text">Hecho con <div id="footer__heart">❤️</div> por Dalila Cabrera</p>
         <p class="footer-text">© 2025</p>
     </footer>
 
